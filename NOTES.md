@@ -19,6 +19,6 @@ While setting up, I found that `.gitignore` had leading spaces on most lines. Gi
 ## Verification
 
 - `/memory` — **confirmed**. Output: `Opened ./CLAUDE.md`, so the project memory file is the one Claude Code loads.
-- `/permissions` — **confirmed**. The Allow tab lists the rules from `.claude/settings.json`: `Bash(git diff:*)`, `Bash(git log:*)`, `Bash(git status:*)`, `Bash(npm run lint:*)`, `Bash(npm test:*)`. The Ask and Deny tabs show the remaining rules from the same file.
+- `/permissions` — **confirmed**. The Allow tab lists the rules from `.claude/settings.json`: `Bash(git diff:*)`, `Bash(git log:*)`, `Bash(git status:*)`, `Bash(npm run lint:*)`, `Bash(npm test:*)`.
 - Asked "How do I run the tests here?" — **confirmed**. Claude answered: "Run `npm test`, which runs all tests with Node's built-in runner (`node --test`). To run one test by name, use `node --test --test-name-pattern="404" tests/users.test.js`." and cited the "Commands" section of `CLAUDE.md` as its source.
 - `.gitignore` check — **confirmed**. `git check-ignore -v .env .claude/settings.local.json` prints `.gitignore:2:.env` and `.gitignore:7:.claude/settings.local.json`, so both files are ignored (no leading spaces left in `.gitignore`).
