@@ -21,4 +21,5 @@ While setting up, I found that `.gitignore` had leading spaces on most lines. Gi
 <!-- TODO: fill in after running these in a fresh session -->
 - `/memory`: CLAUDE.md shows as loaded — _confirmed / not yet_
 - `/permissions`: allow / ask / deny rules listed — _confirmed / not yet_
-- Asked "How do I run the tests here?" — Claude answered from CLAUDE.md — _confirmed / not yet_
+- Asked "How do I run the tests here?" — **confirmed**. Claude answered: "Run `npm test`, which runs all tests with Node's built-in runner (`node --test`). To run one test by name, use `node --test --test-name-pattern="404" tests/users.test.js`." and cited the "Commands" section of `CLAUDE.md` as its source.
+- `.gitignore` check — **confirmed**. `git check-ignore -v .env .claude/settings.local.json` prints `.gitignore:2:.env` and `.gitignore:7:.claude/settings.local.json`, so both files are ignored (no leading spaces left in `.gitignore`).
